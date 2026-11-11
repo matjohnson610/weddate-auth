@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Alert type="information" heading={"Success"}>
+      <Alert type="information" heading={"Success"} closable onClose={()=>console.log("closed")}>
         Everything is really good!
       </Alert>
     </div>
@@ -20,7 +20,7 @@ function App() {
   //       <section id="center">
   //         <div className="hero">
   //           <img src={heroImg} className="base" width="170" height="179" alt="" />
-  //           <img src={reactLogo} className="framework" alt="React logo" />
+  //           <img src={reactLonpm go} className="framework" alt="React logo" />
   //           <img src={viteLogo} className="vite" alt="Vite logo" />
   //         </div>
   //         <div>
