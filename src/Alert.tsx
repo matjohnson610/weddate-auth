@@ -1,6 +1,21 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
-export function Alert({ type = "information", heading, children, closable, onClose }) {
+type Props = {
+  type?: string;
+  heading: string;
+  children: ReactNode;
+  closable?: boolean ;
+  onClose?: () => void;
+};
+
+
+export function Alert({
+  type = "information",
+  heading,
+  children,
+  closable,
+  onClose,
+}:Props) {
   const [visible, setVisible] = useState<boolean>(true);
   if (!visible) {
     return null;
